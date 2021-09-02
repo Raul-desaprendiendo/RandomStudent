@@ -1,19 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace SOLIDS
+﻿namespace SOLIDS
 {
-    class Mail
+    public class Mail
     {
-        string email;
-        string Subject;
-        private string sender;
+        readonly string Email;
+        readonly string Subject;
+        private string Sender;
 
         public Mail(string v, string email)
         {
-            this.sender = v;
-            this.email = email;
+            this.Sender = v;
+            this.Email = email;
         }
     }
 }
