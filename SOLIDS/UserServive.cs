@@ -12,11 +12,12 @@ namespace SOLIDS
                 throw new Exception("Email is not an email");
             var user = new User(email, password);
 
-            SendEmail(new Mail("mysite@nowhere.com", email));
+            //Aqui estaba  SendEmail(new Mail("mysite@nowhere.com", email));
         }
 
         private void SendEmail(Mail mail)
         {
+            SendEmail(new Mail("mysite@nowhere.com", email));//Enviar el email esta mejor en enviar email.
             Console.WriteLine(mail);
         }
 
