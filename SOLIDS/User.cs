@@ -13,5 +13,9 @@ namespace SOLIDS
             Email = e;
             Password = p;
         }
+        public void SendEmail(Mail mail)
+        {
+            Console.WriteLine(mail);
+        }
     }
 }

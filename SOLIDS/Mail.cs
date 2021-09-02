@@ -15,5 +15,10 @@ namespace SOLIDS
             this.sender = v;
             this.email = email;
         }
+
+        public override string ToString()
+        {
+            return this.sender + " para:" + this.email;
+        }
     }
 }
