@@ -6,14 +6,19 @@ namespace SOLIDS
 {
     class Mail
     {
-        string email;
-        string Subject;
+        private string email;
+        private string Subject;
         private string sender;
 
-        public Mail(string v, string email)
+        public Mail(string sender, string email)
         {
-            this.sender = v;
+            this.sender = sender;
             this.email = email;
+        }
+
+        public void SendEmail()
+        {
+            Console.WriteLine(this.sender + " - " + this.email);
         }
     }
 }

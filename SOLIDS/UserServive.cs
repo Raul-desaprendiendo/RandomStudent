@@ -6,21 +6,21 @@ namespace SOLIDS
 {
     public class UserService
     {
-        public void Register(string email, string password)
+        public Boolean Register(string email, string password)
         {
             if (!ValidateEmail(email))
+            {  
                 throw new Exception("Email is not an email");
-            var user = new User(email, password);
-
-            SendEmail(new Mail("mysite@nowhere.com", email));
+            }
+            else
+            {   
+                return true;
+            }
+            return false;
         }
 
-        private void SendEmail(Mail mail)
-        {
-            Console.WriteLine(mail);
-        }
 
-        public virtual bool ValidateEmail(string email)
+        private bool ValidateEmail(string email)
         {
             return email.Contains("@");
         }

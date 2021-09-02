@@ -6,12 +6,12 @@ namespace SOLIDS
 {
     class User
     {
-        public string Email;
-        public string Password;
-        public User(string e, string p)
+        private string Email;
+        private string Password;
+        public User(string email, string pass)
         {
-            Email = e;
-            Password = p;
+            Email = email;
+            Password = pass;
         }
     }
 }
