@@ -6,7 +6,9 @@ namespace SOLIDS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            User angel = new User("agomez@gteam.es","password");
+            UserService.Register(angel.Email, angel.Password);
+
         }
     }
 }
