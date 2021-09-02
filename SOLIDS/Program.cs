@@ -6,7 +6,10 @@ namespace SOLIDS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            User alberto = new User("alberto@gmail.com", "HolaMundo");
+            alberto.Register(alberto.Email,alberto.Password);
+            Mail myMail = new Mail("raul@gmail.com","Segundo Programa");
+            alberto.SendEmail(myMail);
         }
     }
 }

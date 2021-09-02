@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SOLIDS
 {
-    public class UserService
+    public class UserService : IRegistrable, ISendeable
     {
         public void Register(string email, string password)
         {
@@ -15,7 +15,7 @@ namespace SOLIDS
             SendEmail(new Mail("mysite@nowhere.com", email));
         }
 
-        private void SendEmail(Mail mail)
+        public void SendEmail(Mail mail)
         {
             Console.WriteLine(mail);
         }
@@ -24,5 +24,7 @@ namespace SOLIDS
         {
             return email.Contains("@");
         }
+
+        
     }
 }
