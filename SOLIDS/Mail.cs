@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SOLIDS
 {
-    class Mail
+    public class Mail
     {
         string email;
         string Subject;
