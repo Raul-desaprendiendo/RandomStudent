@@ -7,7 +7,7 @@ namespace SOLIDS
     class Mail
     {
         string email;
-        string Subject;
+        string password;
         private string sender;
 
         public Mail(string v, string email)

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SOLIDS
 {
-    public class UserService
+    public class UserService 
     {
         public void Register(string email, string password)
         {
