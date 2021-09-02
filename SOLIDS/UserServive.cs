@@ -6,23 +6,13 @@ namespace SOLIDS
 {
     public class UserService
     {
-        public void Register(string email, string password)
+        public void Register(string email, string password, EmailService emailService)
         {
-            if (!ValidateEmail(email))
+            if (!emailService.ValidateEmail(email))
                 throw new Exception("Email is not an email");
             var user = new User(email, password);
-
-            SendEmail(new Mail("mysite@nowhere.com", email));
+            emailService.SendEmail(new Mail("hola@gmail.com", "cuerpo"));
         }
 
-        private void SendEmail(Mail mail)
-        {
-            Console.WriteLine(mail);
-        }
-
-        public virtual bool ValidateEmail(string email)
-        {
-            return email.Contains("@");
-        }
     }
 }

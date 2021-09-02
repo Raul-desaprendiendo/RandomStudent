@@ -4,7 +4,7 @@ using System.Text;
 
 namespace SOLIDS
 {
-    class User
+    public class User
     {
         public string Email;
         public string Password;

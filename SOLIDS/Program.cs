@@ -6,7 +6,9 @@ namespace SOLIDS
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var userSerive = new UserService();
+            var emailService = new EmailService();
+            userSerive.Register("hola@gmail.com", "1234", emailService);
         }
     }
 }

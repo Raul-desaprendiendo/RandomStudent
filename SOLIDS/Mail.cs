@@ -4,16 +4,15 @@ using System.Text;
 
 namespace SOLIDS
 {
-    class Mail
+    public class Mail
     {
-        string email;
-        string Subject;
-        private string sender;
+        public string Email { get; set; }
+        public string Sender { get; set; }
 
-        public Mail(string v, string email)
+        public Mail(string v, string e)
         {
-            this.sender = v;
-            this.email = email;
+            Sender = v;
+            Email = e;
         }
     }
 }
